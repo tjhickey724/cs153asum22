@@ -1,28 +1,54 @@
-import * as React from 'react';
+import React,{useState} from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>This is a simple app</Text>
-    </View>
-  );
+
+const Counter = () => {
+    const [count,setCount] = useState(0);
+    return (
+        
+        <View style={styles.container}>
+        <Text>The counter value is {count} </Text>
+        <Button 
+            title="100" 
+            onPress = {() => setCount(count+100)}
+            
+            />
+        <Button 
+            title="50" 
+            color="red"
+            onPress = {() => setCount(count+50)}
+            />
+        <Button 
+            title="25" 
+            color="yellow"
+            onPress = {() => setCount(count+25)}
+            />
+        <Button 
+            title="10" 
+            color="green"
+            onPress = {() => setCount(count+10)}
+            />
+        <Button 
+            title="5" 
+            color="pink"
+            onPress = {() => setCount(count+5)}
+            />
+        <Button 
+            title="1" 
+            color="black"
+            onPress = {() => setCount(count+1)}
+            />
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
     backgroundColor: '#ecf0f1',
-    padding: 8,
+    padding: 8, 
   },
-  redButton: {
-    flex: 2,
-    backgroundColor: 'red',
-  },
-  greenButton: {
-    flex: 3,
-    backgroundColor: 'green',
-  }
+ 
 });
-export {App};
+export default Counter;
