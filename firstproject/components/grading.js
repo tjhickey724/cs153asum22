@@ -4,15 +4,7 @@ import { Text, View, StyleSheet, Button } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Button
-        title="Blue Button"
-      />
-      <Button style={styles.redButton}
-        title="Red Button"
-      />
-      <Button style={styles.greenButton} 
-        title="Green Button"
-      />
+      <Text>This is a simple app</Text>
     </View>
   );
 }
