@@ -2,11 +2,13 @@ import React from 'react';
 
 //import Counter from './components/counter';
 import Grading from './components/grading';
+import Exam2a from './components/exam2a'
+import Exam2b from './components/exam2b'
 
 //import BMI from './components/bmi'
 export default function App() {
   return (
-    <Grading />
+    <Exam2b />
   );
 }
 
