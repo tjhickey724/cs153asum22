@@ -7,11 +7,18 @@ const styles = StyleSheet.create({
      flex: 1,
      paddingTop: 22
     },
-    item: {
+    item2: {
       padding: 10,
       fontSize: 18,
       height: 44,
     },
+    item: {
+        padding: 10,
+        fontSize: 18,
+        height: 44,
+        textAlign:"center",
+        backgroundColor: "powderblue",
+      },
   });
 
   const data =
@@ -33,26 +40,39 @@ const styles = StyleSheet.create({
     { key: 'Aria', email: 'ariasmith@brandeis.edu', location: 'Ellicott City,MD, USA', age: '20' },
  ];
 
- const rosterItem = (item) => {
+ const rosterItemOrig = (item) => {
     return (
-    <View>
+    <View style={{borderWidth:2,margin:5}}>
         <Text>{item.key}</Text>
         <Text>{item.email}</Text>
-    </View>
+   </View>
     );
  }
+
+ const rosterItem = (item) => {
+    return (
+        <View style={{padding: 10, margin:5, borderWidth:2, backgroundColor:'#fedcba' }}>
+            <View style={{flexDirection: "row", paddingBottom: 10}}>
+                <Text style={{fontSize: 18}}>{item.key}, </Text>
+                <Text style={{fontSize: 18}}>{item.age}</Text>
+            </View>
+            <Text><u>{item.email}</u></Text>
+            <Text style={{color: "grey", paddingTop: 5}}>{item.location}</Text>
+        </View>
+    );
+}
+
  
  
 
 const Roster = () => {
     return (
         <View>
-            <Text>Roster</Text>
+            <Text style={{fontSize:30}}>Roster</Text>
             <FlatList
                data = {data}
                renderItem={({item}) => rosterItem(item)}
             /> 
-            <Text> {JSON.stringify(data,null,5)}</Text>
         </View>
     )
 }
