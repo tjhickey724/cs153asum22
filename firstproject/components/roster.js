@@ -67,7 +67,7 @@ const styles = StyleSheet.create({
 
 const Roster = () => {
     return (
-        <View>
+        <View style={{flex:1}}>
             <Text style={{fontSize:30}}>Roster</Text>
             <FlatList
                data = {data}
