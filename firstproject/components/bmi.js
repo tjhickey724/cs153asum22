@@ -8,6 +8,9 @@ const BMI = () => {
 
   return (
     <View style={{padding: 10}}>
+      <Text style={{fontSize:40,fontWeight:'bold'}}>
+          Body Mass Index Calculator
+      </Text>
       <TextInput
         style={{height: 40}}
         placeholder="Enter your height in inches"
@@ -22,16 +25,22 @@ const BMI = () => {
              setWeight(newText)}
         defaultValue={weight}
       />
-      <Button
-        title="calculate BMI"
-        onPress = {() => {
-            setBMI(weight/(height*height)*703)
-        }}
-      />
-      <Text style={{padding: 10, fontSize: 42}}>
+      <View style={{flexDirection:'row'}}>
+        <Button
+            title="calculate BMI"
+            onPress = {() => {
+                setBMI(weight/(height*height)*703)
+            }}
+        />
+      </View>
+      <Text>
         Your height is {height} inches
-        and your weight is {weight} pounds
-        and your BMI is {bmi}
+      </Text>
+      <Text>
+        Your weight is {weight} pounds
+      </Text>
+      <Text>
+        Your BMI is {bmi}
       </Text>
     </View>
   );

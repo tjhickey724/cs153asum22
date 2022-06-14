@@ -1,54 +1,34 @@
-import React,{useState} from 'react';
-import { Text, View, StyleSheet, Button } from 'react-native';
+import React, { useState } from 'react';
+import { Text, TextInput, View, Button, } from 'react-native';
 
+const Cylinder = () => {
+  const [height, setHeight] = useState('');
+  const [radius, setRadius] = useState('');
+  const [volume, setVolume] = useState('');
 
-const Counter = () => {
-    const [count,setCount] = useState(0);
-    return (
-        
-        <View style={styles.container}>
-        <Text>The counter value is {count} </Text>
-        <Button 
-            title="100" 
-            onPress = {() => setCount(count+100)}
-            
-            />
-        <Button 
-            title="50" 
-            color="red"
-            onPress = {() => setCount(count+50)}
-            />
-        <Button 
-            title="25" 
-            color="yellow"
-            onPress = {() => setCount(count+25)}
-            />
-        <Button 
-            title="10" 
-            color="green"
-            onPress = {() => setCount(count+10)}
-            />
-        <Button 
-            title="5" 
-            color="pink"
-            onPress = {() => setCount(count+5)}
-            />
-        <Button 
-            title="1" 
-            color="black"
-            onPress = {() => setCount(count+1)}
-            />
-        </View>
-    );
+  return (
+    <View style={{padding: 10}}>
+      <TextInput
+        style={{height: 40}}
+        placeholder="Enter height of Cylinder"
+        onChangeText={newText => setHeight(newText)}
+        defaultValue={height}
+      />
+      <TextInput
+        style={{height: 40}}
+        placeholder="Enter radius of Cylinder"
+        onChangeText={newText => setRadius(newText)}
+        defaultValue={radius}
+      />
+      <Button
+        title="calculate Cylinder Volume"
+        onPress = {() => {
+            setVolume(Math.PI * radius * radius * height)
+        }}
+      />
+      <Text>volume = {volume} </Text>
+    </View>
+  );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    backgroundColor: '#ecf0f1',
-    padding: 8, 
-  },
- 
-});
-export default Counter;
+export default Cylinder;
