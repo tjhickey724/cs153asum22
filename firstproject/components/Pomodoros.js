@@ -81,7 +81,7 @@ const Pomodoros = () => {
   }
 
 // We can set debug to true if we want to see all of the state variables
-  let debug=true
+  let debug=false
   const debugView =
     (<View>
       <Text style={styles.headerText}>
@@ -145,7 +145,8 @@ const Pomodoros = () => {
         <Button
                title={"Record"}
                color="blue"
-               onPress = {() => {
+               onPress = {() => 
+                {
                  const newPomodoros =
                    pomodoros.concat(
                      {'dateTime':dateTime,
