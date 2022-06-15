@@ -9,7 +9,7 @@ import Pomodoros from './components/Pomodoros'
 //import BMI from './components/bmi'
 export default function App() {
   return (
-    <Pomodoros />
+    <Exam2b />
   );
 }
 
