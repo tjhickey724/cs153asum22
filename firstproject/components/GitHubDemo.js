@@ -6,6 +6,7 @@ import { Text, FlatList, View } from 'react-native';
 const GitHubDemo = () => {
     const [data,setData] = useState([]);
     const [loading,setLoading] = useState(true);
+    const [username,setUsername] = useState("tjhickey724")
 
     const getRepos = async () => {
         try {
@@ -19,7 +20,7 @@ const GitHubDemo = () => {
         }
       };
 
-    useEffect(() => {getRepos()}, [])
+    useEffect(() => {getRepos()}, [username])
 
     return(
         <View>
