@@ -12,8 +12,7 @@ const Pomodoros = () => {
   const [pomodoros,setPomodoros]= useState([])
 
   // this loads in the data after the app has been rendered
-  useEffect(() => {getData()}
-           ,[])
+  useEffect(() => {getData()},[])
 
   
 

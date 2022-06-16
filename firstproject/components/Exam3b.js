@@ -9,9 +9,9 @@ const Exam3b = () => {
 
             <Text style={styles.title}>Exam3b</Text>
             <View style={{flexDirection:'row'}}>
-                <Text>Enter your main ingredient:</Text>
+                <Text>Enter your image URL:</Text>
                 <TextInput
-                    style={{flex:1}}
+                    style={{flex:1,backgroundColor:'yellow'}}
                     placeholder="url of an image"
                     onChangeText = {(text) => {setText(text)}} 
                     defaultValue={uri}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Text, FlatList, View, Image, TextInput } from 'react-native';
+import { Text, FlatList, View, Image, TextInput, SafeAreaView } from 'react-native';
 
 
 
@@ -24,7 +24,7 @@ const Exam3c = () => {
     useEffect(() => {getMeals()}, [ingr])
 
     return(
-        <View>
+        <SafeAreaView>
             <Text style={{fontSize:30,margin:10}}>Meal Finder</Text>
             <View style={{flexDirection:'row',margin:10}}>
                 <Text>Main Ingredient:</Text>
@@ -37,7 +37,7 @@ const Exam3c = () => {
             
             <FlatList
                 data={data}
-                keyExtractor={({ id }, index) => id}
+                keyExtractor={({ idMeal }, index) => idMeal}
                 renderItem={({ item }) => (
                     <View style={{flexDirection:'row',
                                     padding:15,
@@ -55,7 +55,7 @@ const Exam3c = () => {
                 )}
             /> 
 
-        </View>
+        </SafeAreaView>
     );
 }
 

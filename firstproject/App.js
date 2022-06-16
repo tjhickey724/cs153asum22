@@ -11,7 +11,7 @@ import CourseDemo from './components/CourseDemo';
 import GitHubDemo from './components/GitHubDemo';
 */
 import Pomodoros from './components/Pomodoros';
-import Exam3c from './components/Exam3b';
+import Exam3c from './components/Exam3c';
 
 
 //import BMI from './components/bmi'
