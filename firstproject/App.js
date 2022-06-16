@@ -11,12 +11,13 @@ import CourseDemo from './components/CourseDemo';
 import GitHubDemo from './components/GitHubDemo';
 */
 import Pomodoros from './components/Pomodoros';
+import Exam3c from './components/Exam3b';
 
 
 //import BMI from './components/bmi'
 export default function App() {
   return (
-    <Pomodoros />
+    <Exam3c />
   );
 }
 
