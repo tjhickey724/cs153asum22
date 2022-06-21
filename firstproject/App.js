@@ -12,12 +12,13 @@ import GitHubDemo from './components/GitHubDemo';
 */
 import Pomodoros from './components/Pomodoros';
 import Exam3c from './components/Exam3c';
+import Counter from './components/counter';
 
 
 //import BMI from './components/bmi'
 export default function App() {
   return (
-    <Exam3c />
+    <Counter />
   );
 }
 

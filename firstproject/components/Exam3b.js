@@ -22,7 +22,7 @@ const Exam3b = () => {
                 onPress={() => {setUri(text)}} />
             <Image 
                 style={ {  width: 250, height: 250,}}
-                source={{uri:uri}} />
+                source={{uri}} />
            
 
         </View>
