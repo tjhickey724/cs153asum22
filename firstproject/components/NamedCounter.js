@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import { Text, View, StyleSheet, Button } from 'react-native';
 
-const NamedCounter = ({label,value}) => {
+const NamedCounter = ({label,value,updateTotal}) => {
     /* increase the count by "value" when it pushed
        and display the label in the view ..
     */
@@ -12,7 +12,10 @@ const NamedCounter = ({label,value}) => {
             <Button 
                 color = '#FAD4D4'
                 title={label} 
-                onPress = {() => setCount(count+value)}
+                onPress = {() => {
+                    updateTotal(value);
+                    setCount(count+value);}
+                 }
                 />
         </View>
     );
