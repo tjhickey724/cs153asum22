@@ -6,16 +6,20 @@ const NamedCounter = ({label,value,updateTotal}) => {
        and display the label in the view ..
     */
     const [count,setCount] = useState(0);
+    const [coins,setCoins] = useState(0);
     return (
         <View style={styles.container}>
+            <Text>{coins} coins</Text>
             <Text>{count} cents</Text>
             <Button 
                 color = '#FAD4D4'
                 title={label} 
                 onPress = {() => {
                     updateTotal(value);
-                    setCount(count+value);}
-                 }
+                    setCount(count+value);
+                    setCoins(coins+1);
+                    }
+                }
                 />
         </View>
     );
