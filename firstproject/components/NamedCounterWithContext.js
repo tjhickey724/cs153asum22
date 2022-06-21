@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Button, AsyncStorage } from 'react-native';
 import {useValue} from './ValueContext';
 
 
-const NamedCounter = ({ label, value, updateTotal }) => {
+const NamedCounterWithContext = ({ label, value, updateTotal }) => {
     const {currentValue,setCurrentValue} = useValue();
 
   const [count, setCount] = useState(0);
@@ -45,4 +45,4 @@ const styles = StyleSheet.create({
   }
 
 });
-export default NamedCounter;
+export default NamedCounterWithContext;
