@@ -8,7 +8,7 @@ const NamedCounter = ({label,value}) => {
     const [count,setCount] = useState(0);
     return (
         <View style={styles.container}>
-            <Text>The counter value is {count} </Text>
+            <Text>The named counter value is {count} </Text>
             <Button 
                 title="push" 
                 onPress = {() => setCount(count+1)}
