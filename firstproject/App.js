@@ -1,12 +1,13 @@
 import React from 'react';
 
-import NamedCounter from './components/NamedCounter';
 
+import CounterDemo from './components/CounterDemo';
 
-//import BMI from './components/bmi'
+export default CounterDemo;
+/*
 export default function App() {
-  return (
-    <NamedCounter  label="dime" value={10}/>
+  return ( <CounterDemo />  
   );
 }
+*/
 
