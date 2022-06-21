@@ -23,8 +23,22 @@ const NamedCounterWithContext = ({ label, value, updateTotal }) => {
             setCurrentValue(
                 {total:currentValue.total+value,
                  count:currentValue.count+1,
-                 log: currentValue.log })
+                 log: currentValue.log.concat([value]) })
             setCoins(coins + 1);
+            }
+          }
+        />
+
+        <Button
+          title={label}
+          color="red"
+          onPress={() => {
+            setCount((count - value));
+            setCurrentValue(
+                {total:currentValue.total-value,
+                 count:currentValue.count-1,
+                 log: currentValue.log.concat([-value]) })
+            setCoins(coins - 1);
             }
           }
         />

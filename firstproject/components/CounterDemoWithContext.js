@@ -20,6 +20,7 @@ export default function CounterDemo() {
           <NamedCounterWithContext label="Dime" value={10}  />
           <NamedCounterWithContext label="Quarter" value={25}  />
         </View>
+        <Text>{JSON.stringify(currentValue.log)}</Text>
       </View>
   
     );
