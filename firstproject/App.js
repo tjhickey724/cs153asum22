@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-import CounterDemo from './components/CounterDemo';
+import ContextDemo from './components/ContextDemo';
 
-export default CounterDemo;
+export default ContextDemo;
 /*
 export default function App() {
   return ( <CounterDemo />  
