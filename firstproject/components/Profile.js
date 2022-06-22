@@ -33,7 +33,9 @@ const Profile = () => {
             />
             </View>
 
-            <Button name="save profile info"
+            <Button 
+               title="save profile info"
+               color="red"
                onPress = {() => {
                 setCurrentValue({name:name,email:email});
                }}

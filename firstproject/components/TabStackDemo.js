@@ -3,6 +3,7 @@ import { Button, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {useValue} from './ValueContext';
 
 import ProfileScreen from './Profile';
 
@@ -14,10 +15,13 @@ function DetailsScreen() {
   );
 }
 
+// access the profile info from this page ...
 function HomeScreen({ navigation }) {
+    const {currentValue} = useValue();
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home screen</Text>
+      <Text>Home screen for {currentValue.name} 
+            with email {currentValue.email}</Text>
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}
