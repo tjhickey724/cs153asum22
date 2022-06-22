@@ -4,6 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
+import ProfileScreen from './Profile';
+
 function DetailsScreen() {
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
@@ -58,6 +60,7 @@ function SettingsStackScreen() {
       />
       <SettingsStack.Screen name="Details" component={DetailsScreen} 
       />
+      
     </SettingsStack.Navigator>
   );
 }
@@ -73,6 +76,10 @@ export default function App() {
             headerShown: false
         }}/>
         <Tab.Screen name="Settings" component={SettingsStackScreen} 
+        options={{
+            headerShown: false
+        }}/>
+        <Tab.Screen name="Profile" component={ProfileScreen} 
         options={{
             headerShown: false
         }}/>
