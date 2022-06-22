@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-import NavDemo from './components/NavDemo';
+import Demo from './components/TabStackDemo';
 
-export default NavDemo;
+export default Demo;
 /*
 export default function App() {
   return ( <CounterDemo />  
