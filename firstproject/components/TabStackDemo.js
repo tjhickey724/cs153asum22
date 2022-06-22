@@ -41,8 +41,10 @@ const HomeStack = createNativeStackNavigator();
 function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="Page1" component={HomeScreen} />
-      <HomeStack.Screen name="Details" component={DetailsScreen} />
+      <HomeStack.Screen name="Page1" component={HomeScreen} 
+         />
+      <HomeStack.Screen name="Details" component={DetailsScreen} 
+         />
     </HomeStack.Navigator>
   );
 }
@@ -52,8 +54,10 @@ const SettingsStack = createNativeStackNavigator();
 function SettingsStackScreen() {
   return (
     <SettingsStack.Navigator>
-      <SettingsStack.Screen name="Settings" component={SettingsScreen} />
-      <SettingsStack.Screen name="Details" component={DetailsScreen} />
+      <SettingsStack.Screen name="Settings" component={SettingsScreen} 
+      />
+      <SettingsStack.Screen name="Details" component={DetailsScreen} 
+      />
     </SettingsStack.Navigator>
   );
 }
@@ -64,8 +68,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeStackScreen} />
-        <Tab.Screen name="Settings" component={SettingsStackScreen} />
+        <Tab.Screen name="Home" component={HomeStackScreen} 
+          options={{
+            headerShown: false
+        }}/>
+        <Tab.Screen name="Settings" component={SettingsStackScreen} 
+        options={{
+            headerShown: false
+        }}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
