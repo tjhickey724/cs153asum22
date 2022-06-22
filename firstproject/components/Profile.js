@@ -10,10 +10,26 @@ const Profile = () => {
 
     return (
         <View>
-            <Text> Profile Page</Text>
-
+            <Text> Profile Page for {name}/{email}</Text>
+            <View style={{flex:1, flexDirection: 'row'}}>
+                <Text> Enter name: </Text>
+                <TextInput
+                  style={{height: 40, backgroundColor: 'white'}}
+                  placeholder="Enter name"
+                  onChangeText={newText => setName(newText)}
+                  defaultValue={name}
+                />
+            </View>
+           <View style={{flex:1, flexDirection: 'row'}}>
+           <Text> Enter email: </Text>
+            <TextInput
+              style={{height: 40, backgroundColor: 'white'}}
+              placeholder="Enter email"
+              onChangeText={newText => setEmail(newText)}
+              defaultValue={email}
+            />
+            </View>
         </View>
     )
 }
-
-export default Profile;
+export default Profile
