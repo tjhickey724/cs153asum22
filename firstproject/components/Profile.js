@@ -6,7 +6,7 @@ import {View,Text,TextInput,Button} from 'react-native';
 import {useValue} from './ValueContext';
 
 const Profile = () => {
-    const {currentValue,setCurrectValue} = useValue();
+    const {currentValue,setCurrentValue} = useValue();
     const [name,setName] = useState("anon");
     const [email,setEmail] = useState("anon@anon.com");
     
