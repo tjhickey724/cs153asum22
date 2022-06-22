@@ -3,10 +3,13 @@
 */
 import React,{useState} from 'react';
 import {View,Text,TextInput,Button} from 'react-native';
+import {useValue} from './ValueContext';
 
 const Profile = () => {
+    const {currentValue,setCurrectValue} = useValue();
     const [name,setName] = useState("anon");
     const [email,setEmail] = useState("anon@anon.com");
+    
 
     return (
         <View>
@@ -29,6 +32,12 @@ const Profile = () => {
               defaultValue={email}
             />
             </View>
+
+            <Button name="save profile info"
+               onPress = {() => {
+                setCurrentValue({name:name,email:email});
+               }}
+               />
         </View>
     )
 }

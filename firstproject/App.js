@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import Demo from './components/Profile';
+import Demo from './components/TabStackDemoWithContext';
 
 
 export default Demo;
