@@ -20,8 +20,9 @@ function HomeScreen({ navigation }) {
     const {currentValue} = useValue();
   return (
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Home screen for {currentValue.name} 
-            with email {currentValue.email}</Text>
+      <Text>Home screen for {currentValue.name}  </Text>
+      <Text> with email {currentValue.email}</Text>
+      <Text> and secret {currentValue.secret}</Text>
       <Button
         title="Go to Details"
         onPress={() => navigation.navigate('Details')}

@@ -3,7 +3,7 @@ import ValueProvider from './ValueContext';
 import TabStackDemo from './TabStackDemo'
 
 const App = () => {
-  const data = {name:"anon", email:"anon@anon.com"}
+  const data = {name:"anon", email:"anon@anon.com",secret:""}
 
   return (
     <ValueProvider value={data}>

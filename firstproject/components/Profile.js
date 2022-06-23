@@ -9,6 +9,7 @@ const Profile = () => {
     const {currentValue,setCurrentValue} = useValue();
     const [name,setName] = useState("anon");
     const [email,setEmail] = useState("anon@anon.com");
+    const [secret,setSecret] = useState("...");
     
 
     return (
@@ -33,13 +34,25 @@ const Profile = () => {
             />
             </View>
 
+            <View style={{flex:1, flexDirection: 'row'}}>
+           <Text> Enter secret: </Text>
+            <TextInput
+              style={{height: 40, backgroundColor: 'white'}}
+              placeholder="Enter email"
+              onChangeText={newText => setSecret(newText)}
+              defaultValue={email}
+            />
+            </View>
+
             <Button 
                title="save profile info"
                color="red"
                onPress = {() => {
-                setCurrentValue({name:name,email:email});
+                setCurrentValue({name,email,secret});
                }}
                />
+
+        
         </View>
     )
 }
