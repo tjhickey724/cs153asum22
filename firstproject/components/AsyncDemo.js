@@ -2,7 +2,7 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import Async1Screen from './Aysnc1';
+import Async1Screen from './Async1';
 import Async2Screen from './Async2';
 
 const Tab = createBottomTabNavigator();

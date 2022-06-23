@@ -1,9 +1,9 @@
 import React from "react";
 import ValueProvider from './ValueContext';
-import AsynDemo from './AsyncDemo'
+import AsyncDemo from './AsyncDemo';
 
 const App = () => {
-  const data = {name:"anon", email:"anon@anon.com",secret:""}
+  const data = {username:"anon"};
 
   return (
     <ValueProvider value={data}>
