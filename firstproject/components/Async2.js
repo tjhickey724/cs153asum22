@@ -1,9 +1,9 @@
 import React from 'react';
 import {View,Text,TextInput} from 'react-native';
-import {useValue} from './ValueContext';
+import {useValue} from './ValueStorageContext';
 
 const Async2 = () => {
-    const {currentValue,setCurrentValue} = useValue();
+    const {currentValue} = useValue();
     return (
         <View>
             <Text> Async2 </Text>

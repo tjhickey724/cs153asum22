@@ -1,3 +1,5 @@
+//Here is my solution:
+
 import React, { useState, useEffect } from 'react';
 import { Text, FlatList, View,  Button, TextInput, SafeAreaView } from 'react-native';
 
@@ -7,11 +9,10 @@ const Exam4c = () => {
     const [data,setData] = useState([]);
     const [loading,setLoading] = useState(true);
     const [ingr,setIngr] = useState('Salmon');
-    const [area,setArea] = useState('i');
 
     const getMeals = async () => {
         try {
-          const url = "https://www.themealdb.com/api/json/v1/1/list.php?"+area+"=list";
+          const url = "https://www.themealdb.com/api/json/v1/1/list.php?i=list";
           const response = await fetch(url);
           const json = await response.json();
           console.dir(json.meals);
@@ -23,7 +24,7 @@ const Exam4c = () => {
         }
       };
 
-    useEffect(() => {getMeals()}, [ingr])
+    useEffect(() => {getMeals()}, [])
 
     return(
         <SafeAreaView>
