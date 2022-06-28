@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {View,Text,TextInput,Button} from 'react-native';
-import {useValue} from './ValueStorageContext';
+import {useValue} from './ValueStorageContext'; // to use/change shared values
 
 const Async1 = () => {
     const [text,setText] = useState("");
