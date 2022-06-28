@@ -6,8 +6,10 @@ const Async2 = () => {
     const {currentValue} = useValue();
     return (
         <View>
-            <Text> Async2 </Text>
-            <Text> username: {currentValue.username} </Text>
+            <Text> Age Calculator </Text>
+            <Text> age in years: {currentValue.age} </Text>
+            <Text> age in weeks: {currentValue.age*52} </Text>
+            <Text> age in days: {currentValue.age*365.25} </Text>
         </View>
     )
 }
