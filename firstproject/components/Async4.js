@@ -7,13 +7,16 @@ const Async4 = () => {
     const [feedback,setFeedback] = useState("");
     return (
         <View>
-            <Text> Give some feedback please: </Text>
+            <Text> Give some feedback pretty please: </Text>
             <TextInput
                placeholder="feedback"
                onChangeText = {(text) => setFeedback(text)}
             />
             <Button
                 title="send feedback"
+                onPress = {() => {
+                    console.log('sending feedback....');
+                    currentValue.sendFeedback(feedback);}}
                 />
         </View>
     )
