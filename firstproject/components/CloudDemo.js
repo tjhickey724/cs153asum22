@@ -16,8 +16,14 @@ const CloudDemo = () => {
         console.log('getData')
         const response = await Axios.post(url+"/cloud/get",{email,key});
         setResult(JSON.stringify(response.data));
-    
     };
+
+    const getKeyData = async () => {
+        console.log('getData')
+        const response = await Axios.post(url+"/cloud/getKeyData",{key});
+        setResult(JSON.stringify(response.data));
+    };
+
     const getAllData = async () => {
         console.log('getAllData')
         const response = await Axios.get(url+"/cloud/showAll");
@@ -86,6 +92,11 @@ const CloudDemo = () => {
                 title="get"
                 color="lightgreen"
                 onPress = {() => getData() } 
+            />
+            <Button
+                title="getKeyData"
+                color="lightgreen"
+                onPress = {() => getKeyData() } 
             />
             <Button
                 title="getAll"
