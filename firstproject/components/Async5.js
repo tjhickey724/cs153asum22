@@ -10,6 +10,7 @@ const Async5 = () => {
             <Text> Here is the feedback </Text>
             <Text>
                 Feedback goes here {JSON.stringify(currentValue.getFeedback())}
+                .... {currentValue.getResult()}
             </Text>
         </View>
     )
