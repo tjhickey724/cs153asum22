@@ -1,5 +1,3 @@
-
-
 import React, {useState } from 'react';
 import {View, Text, TextInput, Button } from 'react-native';
 import Axios from 'axios';
@@ -11,7 +9,7 @@ const CloudDemo = () => {
     const [key,setKey] = useState("todo");
     const [value,setValue] = useState("test value 0");
     const [result,setResult] = useState("result goes here");
-
+    const [comment,setComment] = useState("comment");
     const getData = async () => {
         console.log('getData')
         const response = await Axios.post(url+"/cloud/get",{email,key});
@@ -86,6 +84,14 @@ const CloudDemo = () => {
                 defaultValue={value}
             />
         </View>
+        <View style={{flexDirection:'row'}}>
+           <Text> comment: </Text>
+           <TextInput
+              placeholder='comment'
+              onChangeText = {(text) => setComment(text)}
+              defaultValue={comment}
+            />
+         </View>
         <View style={{flex:1}}></View>
         <View style={{flexDirection:'row'}}>
             <Button
@@ -113,6 +119,7 @@ const CloudDemo = () => {
                 color="aqua"
                 onPress = {() => clearData() } 
             />
+
         </View>
         <Text>{result}</Text>
 
