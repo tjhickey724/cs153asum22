@@ -10,7 +10,7 @@ const App = () => {
   let data = {name:"Tim Hickey",age:66.9,weight:165,height:68};
 
   return (
-    <ValueProvider value={data}>
+    <ValueProvider value={data} tag="@asyncDemo1">
         <AsyncDemo />
     </ValueProvider>
   )
