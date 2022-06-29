@@ -51,7 +51,10 @@ const CloudDemo = () => {
         <Text style={{marginBottom:20,width:"50%",backgroundColor:'lightgreen'}}>
             Change the values for the email, key, and value and then press the
             get, getAll, store, and clear buttons to see what happens! This uses the 
-            server at the url {url}
+            server at the url 
+        </Text>
+        <Text style={{borderWidth:3,padding:5,justifyContent:'center',width:'50%'}}>
+            {url}
         </Text>
         <View style={{flexDirection:'row'}}>
             <Text>email:</Text>
@@ -77,6 +80,7 @@ const CloudDemo = () => {
                 defaultValue={value}
             />
         </View>
+        <View style={{flex:1}}></View>
         <View style={{flexDirection:'row'}}>
             <Button
                 title="get"
