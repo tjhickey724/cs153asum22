@@ -11,28 +11,31 @@ const App = () => {
 
   const sendFeedback = async (feedback) => {
 
-    //const response = 
+    const response = 
       await Axios.post(url+"/cloud/store",
                           {email:'tjhickey@brandeis.edu',
                            key:'asyncCDfeedback',
-                           feedback});
-    //console.dir(response.data);
+                           value:feedback,
+                          });
+    console.dir(response.data);
     //setResult(JSON.stringify(response.data));
 };
 
-const getFeedback = async () => {
+const getFeedback = async (saveFeedback) => {
   console.log('getting feedback')
   const response = await Axios.post(url+"/cloud/get",
             {email:'tjhickey@brandeis.edu',key:'asyncCDfeedback'});
-  console.dir(response)
-  //setResult(response.data);
+  console.log('got feedback:')
+  console.dir(response.data)
+  saveFeedback(response.data);
 
-};  
+}; 
 
-  //const getFeedback = () => {console.log('getting feedback'); return(['f1','f2'])}
-  const [result,setResult] = useState("");
+const clearData = async(email) => {
+  console.log('clear');
+  const response = await Axios.post(url+"/cloud/clear",{email:'tjhickey@brandeis.edu'});
+};
 
-  const getResult = () => {console.log('getting result'); return result;}
 
   let data = {name:"Tim Hickey",
               age:66.9,
@@ -40,7 +43,7 @@ const getFeedback = async () => {
               height:68,
               sendFeedback,
               getFeedback,
-              getResult
+              clearData,
              }
 
   return (

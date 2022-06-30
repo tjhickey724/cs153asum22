@@ -11,12 +11,14 @@ const Async4 = () => {
             <TextInput
                placeholder="feedback"
                onChangeText = {(text) => setFeedback(text)}
+               value={feedback}
             />
             <Button
                 title="send feedback"
                 onPress = {() => {
                     console.log('sending feedback....');
-                    currentValue.sendFeedback(feedback);}}
+                    currentValue.sendFeedback(feedback);
+                    setFeedback("")}}
                 />
         </View>
     )

@@ -10,6 +10,7 @@ const CloudDemo = () => {
     const [value,setValue] = useState("test value 0");
     const [result,setResult] = useState("result goes here");
     const [comment,setComment] = useState("comment");
+    
     const getData = async () => {
         console.log('getData')
         const response = await Axios.post(url+"/cloud/get",{email,key});
