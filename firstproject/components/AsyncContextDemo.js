@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import Axios from 'axios';
 
 
@@ -10,7 +10,6 @@ const App = () => {
   const url="https://damp-springs-29329.herokuapp.com";
 
   const sendFeedback = async (feedback) => {
-
     const response = 
       await Axios.post(url+"/cloud/store",
                           {email:'tjhickey@brandeis.edu',
@@ -18,7 +17,6 @@ const App = () => {
                            value:feedback,
                           });
     console.dir(response.data);
-    //setResult(JSON.stringify(response.data));
 };
 
 const getFeedback = async (saveFeedback) => {

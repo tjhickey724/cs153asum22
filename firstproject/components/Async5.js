@@ -13,7 +13,7 @@ const Async5 = () => {
     }
 
     useEffect(()=>{currentValue.getFeedback(saveFeedback)},
-            [cleared]);
+            []);
 
     
     return (
@@ -30,7 +30,6 @@ const Async5 = () => {
                     onPress = {() => 
                             {currentValue.clearData();
                             currentValue.getFeedback(saveFeedback)
-                            setCleared(true);
                             }
                         }
                 />
