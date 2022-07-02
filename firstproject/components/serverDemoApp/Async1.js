@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import {View,Text,TextInput,Button} from 'react-native';
 import {useValue} from './ValueStorageContext'; // to use/change shared values
 
@@ -9,6 +9,14 @@ const Async1 = () => {
     const [weight,setWeight] = useState(currentValue.weight);
     const [height,setHeight] = useState(currentValue.height);
     
+    useEffect(()=> {
+        setName(currentValue.name);
+        setAge(currentValue.age);
+        setWeight(currentValue.weight);
+        setHeight(currentValue.height);
+         },
+        [currentValue]);
+
     return ( 
         <View style={{justifyContent:'space-between',flex:1}}>
             <Text> currentValue = {JSON.stringify(currentValue)} </Text>
@@ -17,7 +25,7 @@ const Async1 = () => {
                 <TextInput
                     style={{backgroundColor:'lightgreen'}}
                     onChangeText = {(text)=>setName(text)} 
-                    value={currentValue.name}
+                    value={name}
                 />
             </View>
             <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
@@ -25,7 +33,7 @@ const Async1 = () => {
                 <TextInput
                     style={{backgroundColor:'lightblue'}}
                     onChangeText = {(text)=>setAge(text)} 
-                    value={currentValue.age}
+                    value={age}
                 />
             </View>
             <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
@@ -33,7 +41,7 @@ const Async1 = () => {
                 <TextInput
                     style={{backgroundColor:'pink'}}
                     onChangeText = {(text)=>setWeight(text)} 
-                    value={currentValue.weight}
+                    value={weight}
                 />
             </View>
             <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
@@ -41,14 +49,14 @@ const Async1 = () => {
                 <TextInput
                     style={{backgroundColor:'aqua'}}
                     onChangeText = {(text)=>setHeight(text)} 
-                    value={currentValue.height}
+                    value={height}
                 />
             </View>
             
             <Button 
                title="save Profile"
                onPress = {() => 
-                    setCurrentValue({...currentValue,name,age,weight,height})
+                    setCurrentValue({name,age,weight,height})
                 }
                />
             

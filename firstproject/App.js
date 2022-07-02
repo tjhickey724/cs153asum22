@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import Demo from './components/serverDemoApp/AsyncContextDemo';
+import Demo from './components/exam6/AsyncContextDemo';
 
 
 export default Demo;

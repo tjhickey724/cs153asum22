@@ -4,15 +4,11 @@ import {useValue} from './ValueStorageContext'; // to use/change shared values
 
 const Async1 = () => {
     const {currentValue,setCurrentValue} = useValue();
-    const [name,setName] = useState(currentValue.name);
-    const [age,setAge] = useState(currentValue.age);
-    const [weight,setWeight] = useState(currentValue.weight);
-    const [height,setHeight] = useState(currentValue.height);
-    
+    const [radius,setRadius] = useState(currentValue.radius);
+    const [height,setHeight] = useState(currentValue.setHeight);
+   
     useEffect(()=> {
-        setName(currentValue.name);
-        setAge(currentValue.age);
-        setWeight(currentValue.weight);
+        setRadius(currentValue.radius);
         setHeight(currentValue.height);
          },
         [currentValue]);
@@ -21,29 +17,14 @@ const Async1 = () => {
         <View style={{justifyContent:'space-between',flex:1}}>
             <Text> currentValue = {JSON.stringify(currentValue)} </Text>
             <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
-                <Text>name</Text>
+                <Text>radius</Text>
                 <TextInput
                     style={{backgroundColor:'lightgreen'}}
-                    onChangeText = {(text)=>setName(text)} 
-                    value={name}
+                    onChangeText = {(text)=>setRadius(text)} 
+                    value={radius}
                 />
             </View>
-            <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
-                <Text>age</Text>
-                <TextInput
-                    style={{backgroundColor:'lightblue'}}
-                    onChangeText = {(text)=>setAge(text)} 
-                    value={age}
-                />
-            </View>
-            <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
-                <Text>weight</Text>
-                <TextInput
-                    style={{backgroundColor:'pink'}}
-                    onChangeText = {(text)=>setWeight(text)} 
-                    value={weight}
-                />
-            </View>
+            
             <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
                 <Text>height</Text>
                 <TextInput
@@ -54,9 +35,9 @@ const Async1 = () => {
             </View>
             
             <Button 
-               title="save Profile"
+               title="save Data"
                onPress = {() => 
-                    setCurrentValue({name,age,weight,height})
+                    setCurrentValue({radius,height})
                 }
                />
             
