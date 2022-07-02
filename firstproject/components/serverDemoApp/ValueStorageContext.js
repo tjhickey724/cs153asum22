@@ -17,9 +17,11 @@ const ValueProvider = ({value, tag, children}) => {
         const jsonValue = await AsyncStorage.getItem(tag)
         let data = null
         if (jsonValue!=null) {
+          console.log('just retrieved jsonValue as '+jsonValue)
           data = JSON.parse(jsonValue);
           setCurrentValue(data)
         } else {
+          console.log('retrieved null, using default value')
           setCurrentValue(value)  
         }
       } catch(e) {
