@@ -17,7 +17,7 @@ const Async1 = () => {
                 <TextInput
                     style={{backgroundColor:'lightgreen'}}
                     onChangeText = {(text)=>setName(text)} 
-                    defaultValue={currentValue.name}
+                    value={currentValue.name}
                 />
             </View>
             <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
@@ -25,7 +25,7 @@ const Async1 = () => {
                 <TextInput
                     style={{backgroundColor:'lightblue'}}
                     onChangeText = {(text)=>setAge(text)} 
-                    defaultValue={currentValue.age}
+                    value={currentValue.age}
                 />
             </View>
             <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
@@ -33,7 +33,7 @@ const Async1 = () => {
                 <TextInput
                     style={{backgroundColor:'pink'}}
                     onChangeText = {(text)=>setWeight(text)} 
-                    defaultValue={currentValue.weight}
+                    value={currentValue.weight}
                 />
             </View>
             <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
@@ -41,7 +41,7 @@ const Async1 = () => {
                 <TextInput
                     style={{backgroundColor:'aqua'}}
                     onChangeText = {(text)=>setHeight(text)} 
-                    defaultValue={currentValue.height}
+                    value={currentValue.height}
                 />
             </View>
             

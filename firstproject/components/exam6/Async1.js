@@ -4,16 +4,12 @@ import {useValue} from './ValueStorageContext'; // to use/change shared values
 
 const Async1 = () => {
     const {currentValue,setCurrentValue} = useValue();
-    console.log('cv='+JSON.stringify(currentValue));
     const [name,setName] = useState(currentValue.name);
-    console.log('cvn='+currentValue.name)
-    console.log('name='+name);
     const [age,setAge] = useState(currentValue.age);
     const [weight,setWeight] = useState(currentValue.weight);
     const [height,setHeight] = useState(currentValue.height);
     
     useEffect(()=> {
-        console.log('setting values to '+JSON.stringify(currentValue))
         setName(currentValue.name);
         setAge(currentValue.age);
         setWeight(currentValue.weight);
