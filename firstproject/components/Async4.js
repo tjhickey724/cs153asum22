@@ -20,6 +20,9 @@ const Async4 = () => {
                     currentValue.sendFeedback(feedback);
                     setFeedback("")}}
                 />
+                <Text>
+                    {JSON.stringify(currentValue)}
+                </Text>
         </View>
     )
 }
