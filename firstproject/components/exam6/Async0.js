@@ -18,7 +18,14 @@ const Async0 = () => {
                 Async1,2,3, AsyncDemo, and AsyncContextDemo 
             </Text>
             <Text>
-                to match the images in mastery.cs.brandeis.edu</Text>
+                to match the images in mastery.cs.brandeis.edu
+            </Text>
+            <Text>
+                Instead of Profile, Age, BMI, you will have Data, Cylinder, Cone.
+                The Data screen lets you specify the radius and height.
+                The Cylinder and Cone screens show the volume using the
+                values of radius and height stored in context.
+            </Text>
 
         </View>
  

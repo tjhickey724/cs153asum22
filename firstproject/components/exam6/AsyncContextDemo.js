@@ -8,10 +8,14 @@ import AsyncDemo from './AsyncDemo';
 const App = () => {
 
   
-  let data = {radius:1,height:10}
+  let data = {name:"Tim Hickey",
+              age:"66.9",
+              weight:"165",
+              height:"68",
+             }
 
   return (
-    <ValueProvider value={data} tag="exam6">
+    <ValueProvider value={data} tag="exam6a">
         <AsyncDemo />
     </ValueProvider>
   )
