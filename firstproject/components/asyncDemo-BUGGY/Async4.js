@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {View,Text,TextInput,Button} from 'react-native';
-import {useValue} from './ValueStorageContext';
+import {useValue} from '../ValueStorageContext';
 
 const Async4 = () => {
     const {currentValue} = useValue();

@@ -1,8 +1,25 @@
+/*
+  This App has a bug in that it stores the
+  functions getFeedback, etc. in the context
+  for sharing, which is fine, but the ValueStorageContext
+  also tries to store and restore them in AsyncStorage
+  and this breaks as only JSON items can be stored
+  in the AsyncStorage....
+
+  I'm keeping this in the folder as we discussed
+  it in class. It is better to have a separate
+  package for handling communication with the server
+  and to only store JSON-able objects in context.
+
+  The demoApp folder shows the proper way to handle
+  server communication, async storage and context
+  sharing.
+*/
 import React from "react";
 import Axios from 'axios';
 
 
-import ValueProvider from './ValueStorageContext';
+import ValueProvider from '../ValueStorageContext';
 import AsyncDemo from './AsyncDemo';
 
 const App = () => {

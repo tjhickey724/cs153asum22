@@ -1,6 +1,6 @@
 import React from 'react';
 import {View,Text,TextInput} from 'react-native';
-import {useValue} from './ValueStorageContext';
+import {useValue} from '../ValueStorageContext';
 
 const Async3 = () => {
     const {currentValue} = useValue();

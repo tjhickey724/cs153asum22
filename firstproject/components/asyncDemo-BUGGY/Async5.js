@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react';
 import {ScrollView,View,Text,TextInput,Button,FlatList} from 'react-native';
-import {useValue} from './ValueStorageContext';
+import {useValue} from '../ValueStorageContext';
 
 const Async5 = () => {
     const {currentValue} = useValue();
