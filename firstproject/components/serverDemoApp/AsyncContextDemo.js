@@ -8,10 +8,10 @@ import AsyncDemo from './AsyncDemo';
 const App = () => {
 
   
-  let data = {name:"Tim Hickey",
-              age:"66.9",
+  let data = {name:"Timothy Hickey",
+              age:"69",
               weight:"165",
-              height:"68",
+              height:"168",
              }
 
   return (
