@@ -14,6 +14,9 @@ const ValueProvider = ({value, tag, children}) => {
   const getData = async () => 
     {
       try {
+        // if (clear=='true') {
+        //   await AsyncStorage.clear(tag);
+        // }
         const jsonValue = await AsyncStorage.getItem(tag)
         let data = null
         if (jsonValue!=null) {
